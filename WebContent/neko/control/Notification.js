@@ -82,14 +82,19 @@ sap.ui.core.Control.extend("neko.control.Notification", {
 		// after animation ends remove notification from the DOM
 		var onEndAnimationFn = function( event ) {
 			
-			if( event.target !== self._notification ) return false;
+			if(Modernizr.cssanimations){
+				if( event.target !== self._notification ) return false;
 			
-			this.removeEventListener( self._getAnimationName(), onEndAnimationFn );
-			
+				this.removeEventListener( self._getAnimationName(), onEndAnimationFn );
+			}	
 			document.body.removeChild( this );
 		};
 		
-		$(this._notification).on( this._getAnimationName(), onEndAnimationFn );	
+		if(Modernizr.cssanimations){
+			$(this._notification).on( this._getAnimationName(), onEndAnimationFn );	
+		}else{
+			onEndAnimationFn();
+		}
 	},
 	
 	/**
