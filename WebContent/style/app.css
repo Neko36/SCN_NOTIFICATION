@@ -1,0 +1,9 @@
+.content>div{
+  padding: 10px;
+}
+
+.sapUiUx3ShellCanvas{
+	box-shadow: 0 4px 17px rgba(0,0,0,0.4);
+	-webkit-box-shadow: 0 4px 17px rgba(0,0,0,0.4);
+	-moz-box-shadow: 0 4px 17px rgba(0,0,0,0.4);
+}
