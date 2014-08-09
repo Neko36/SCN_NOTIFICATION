@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv='Content-Type' content='text/html;charset=UTF-8' />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+<title>Simple Notifications for UI5</title>
+
+<link href="style/app.css" type="text/css" rel="stylesheet" />
+<link href="style/notify.css" type="text/css" rel="stylesheet" />
+<link href="style/icon.css" type="text/css" rel="stylesheet" />
+
+<script src="lib/modernizr.custom.js"
+		type="text/javascript" >
+</script>
+
+<script src="https://openui5.hana.ondemand.com/resources/sap-ui-core.js" 
+		id="sap-ui-bootstrap" 
+		data-sap-ui-theme="sap_bluecrystal" 
+		data-sap-ui-libs="sap.ui.commons, sap.ui.ux3"
+		type="text/javascript"></script>
+<script>
+	sap.ui.localResources("scn_notify");
+	sap.ui.localResources("neko.control");
+	
+	var view = sap.ui.view({
+		id : "idapp1",
+		viewName : "scn_notify.app",
+		type : sap.ui.core.mvc.ViewType.JS
+	});
+	view.placeAt("content");
+</script>
+
+</head>
+<body class="sapUiBody" role="application">
+	<div id="content"></div>
+</body>
+</html>

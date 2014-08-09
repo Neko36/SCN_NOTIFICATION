@@ -1,0 +1,29 @@
+/* Icons see: https://sapui5.netweaver.ondemand.com/sdk/test-resources/sap/m/demokit/icon-explorer/index.html */
+@font-face {
+	font-family: SAP-icons;
+	src: url('../icons/SAP-icons.eot'),
+		 url('../icons/SAP-icons.eot?#iefix') format('embedded-opentype'),
+		 url('../icons/SAP-icons.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+.icon:before {
+	font-family: SAP-icons;
+	font-size: 2em;
+	line-height: 1;
+	position: absolute;
+	-webkit-font-smoothing: antialiased;
+	color: #ffffff;
+}
+.icon-notice:before{
+	content: "\e05c";
+}
+.icon-warning:before{
+	content: "\e0e2";
+}
+.icon-error:before{
+	content: "\e1ec";
+}
+.icon-success:before{
+	content: "\e05b"
+}
